@@ -43,6 +43,11 @@ Feature: Navigate book modal
     And I log in as "student1"
     And I am on "Course 1" course homepage
 
+  Scenario: Block test demo
+    When I log in as "teacher1"
+    And I am on "Course 1" course homepage
+    Then I navigate to "Settings" in current page administration
+
   Scenario: Open book in modal
     When I click on "Test book" "link" in the "region-main" "region"
     Then I should see "First chapter"
